@@ -1,13 +1,111 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: 'noto sans jp', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: url('./images/background.jpg') no-repeat center center/cover;
+}
+
+body:after {
+  content: '';
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+body * {
+  z-index: 1;
+}
+
+/* Global classes */
+.text-bold {
+  font-weight: bold;
+}
+
+.font-lg {
+  font-size: 3rem;
+}
+
+.font-md {
+  font-size: 2.5rem;
+}
+
+.font-sm {
+  font-size: 2rem;
+}
+
+.divider {
+  margin: 1rem auto;
+  width: 70%;
+  border-bottom: 1px solid #fff;
+}
+/* ---------------------- */
+
+.app-container {
+  margin-top: 15%;
+  text-align: center;
+  padding: 1rem;
+  max-width: 600px;
+}
+
+.search-box {
+  width: 100%;
+  outline: none;
+  max-width: 300px;
+  margin: 0.5rem 0 1.5rem 0;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+.text-highlight {
+  font-size: 2rem;
+}
+
+.country {
+  margin-bottom: 10px;
+}
+
+.country img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.country span {
+  font-size: 1.5rem;
+}
+
+.confirmed-cases {
+  color: #c7122e;
+}
+
+.confirmed-deaths {
+  color: silver;
+}
+
+.green-text {
+  font-size: 1.5rem;
+  color: #7fa464;
+}
+
+@media screen and (max-width: 450px) {
+  .font-lg {
+    font-size: 2.2rem;
+  }
+  .font-md {
+    font-size: 2em;
+  }
+  .font-sm {
+    font-size: 1.5rem;
+  }
 }
